@@ -1,0 +1,17 @@
+target/
+/*._*
+.settings/
+**/src/test/**/target/
+bin/
+tmp/
+.idea
+.metadata
+.classpath
+.project
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.loadpath
+.factorypath
