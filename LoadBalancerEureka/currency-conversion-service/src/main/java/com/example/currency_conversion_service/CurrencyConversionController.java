@@ -15,6 +15,7 @@ public class CurrencyConversionController {
 
 	/**
 	 * This tedious can be replaced by the feature Spring cloud provides named FEIGN
+	 * Changes are also done in the main method file
 	 */
 	@Autowired
 	private CurrencyExchangeProxy exchangeProxy;
