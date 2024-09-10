@@ -20,3 +20,16 @@ All the basic content of a Spring Boot Application is experimented with in this 
 ```
 
 Moto of this repository is to get a clear idea of designing a web application based on Spring Boot and technically go through the concepts.
+
+## URLS for testing :
+- Currency Exchange Service
+	- 
+- Currency Conversion Service
+	- http://localhost:8100/currency-conversion/from/AUD/to/INR/quantity/10
+	- http://localhost:8100/currency-conversion-feign/from/EUR/to/INR/quantity/10
+- Eureka
+	- http://localhost:8761/
+- API GATEWAY
+	- http://localhost:8765/SERVICE_NAME_FROM_EUREKA/URL_TO_API
+	- http://localhost:8765/CURRENCY-EXCHANGE-SERVICE/currency-exchange/from/EUR/to/INR
+	- http://localhost:8765/CURRENCY-CONVERSION-SERVICE/currency-conversion-feign/from/EUR/to/INR/quantity/10
