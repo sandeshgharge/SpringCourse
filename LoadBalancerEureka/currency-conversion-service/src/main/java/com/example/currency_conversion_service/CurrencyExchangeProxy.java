@@ -14,7 +14,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 // This name should be same as the sring-application name configured in the property file of Exchange Service
 // Also match with the name displayed on Eureka Server
 
-@FeignClient(name="currency-exchange-service")
+//@FeignClient(name="currency-exchange-service")
+
+/*
+ * For deploying this application in Kubernetes commented above and added below line for feign calls
+ */
+@FeignClient(name="currency-exchang", url="${CURRENCY_EXCHANGE_SERVICE_HOST:http://localhost}:8000")
 public interface CurrencyExchangeProxy {
 
 	@GetMapping("currency-exchange/from/{from}/to/{to}")

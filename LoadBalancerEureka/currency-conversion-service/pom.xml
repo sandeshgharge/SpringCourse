@@ -11,7 +11,7 @@
 
 	<groupId>com.example</groupId>
 	<artifactId>currency-conversion-service</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.1.1-SNAPSHOT</version>
 	<name>currency-conversion-service</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
@@ -40,10 +40,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-config</artifactId>
-		</dependency>
 		
 		<!-- Dependency used to avoid tedious code of calling another service-->
 		<dependency>
@@ -51,11 +47,21 @@
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
 		
-		<!-- Eureka used for naming each server for easy communication between Microservices -->
+		<!-- Commented for deploying the application with kubernetes
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-config</artifactId>
+		</dependency>-->
+		
+		
+		
+		<!-- Eureka used for naming each server for easy communication between Microservices 
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-		</dependency>
+		</dependency>-->
+		
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
@@ -76,6 +82,7 @@
 		<!-- Open Telemetry 
 		    - Simplified Observability (metrics, logs, and traces) -->
 		    
+		<!-- Commented for deploying the application with kubernetes    
 		<dependency>
 		    <groupId>io.micrometer</groupId>
 		    <artifactId>micrometer-observation</artifactId>
@@ -90,7 +97,7 @@
 		    <groupId>io.opentelemetry</groupId>
 		    <artifactId>opentelemetry-exporter-zipkin</artifactId>
 		</dependency>
-		
+		-->
 		<!-- OPTION 2: Brave as Bridge -->
 		
 		<!--
@@ -134,7 +141,7 @@
 				<configuration>
 					<image>
 						<name>
-							bunty27/smd-${project.artifactId}:${project.version}
+							bunty27/${project.artifactId}:${project.version}
 						</name>
 					</image>
 					<pullPolicy>

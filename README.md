@@ -111,6 +111,12 @@ Moto of this repository is to get a clear idea of designing a web application ba
 11. kubectl get componentstatuses
 	- Shows status of master nodes
 	
+12. kubectl apply -f deployment.yaml
+	- Update changes to a deployment using a .yaml file
+
+13. kubectl diff -f deployment.yaml
+	- Check the difference between the configuration of a deployment in a updated .yaml file
+	
 # Kubernetes Concepts (GKE)
 
 All the independent modules are known or linked through *Labels* and *Selectors*.

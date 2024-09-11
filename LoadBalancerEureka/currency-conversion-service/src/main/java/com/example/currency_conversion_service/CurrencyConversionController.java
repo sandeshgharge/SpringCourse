@@ -3,6 +3,8 @@ package com.example.currency_conversion_service;
 import java.math.BigDecimal;
 import java.util.HashMap;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
@@ -12,6 +14,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
+
 
 /**
  * Class defined to get tracing for request which are without Fiegn configuration
@@ -31,6 +34,9 @@ class RestTemplateConfiguration {
 @RestController
 public class CurrencyConversionController {
 	
+
+	private Logger logger = LoggerFactory.getLogger(CurrencyConversionController.class);
+
 	@Autowired
 	private RestTemplate restTemplate;
 
@@ -59,7 +65,8 @@ public class CurrencyConversionController {
 						uriVariables
 						);
 		CurrencyConversion curConv = respEntity.getBody();
-		
+		logger.info("Conversion from {} and {}", from, to);
+
 		return new CurrencyConversion(
 				curConv.getId(),
 				curConv.getFrom(),
@@ -83,6 +90,8 @@ public class CurrencyConversionController {
 			@PathVariable String to,
 			@PathVariable BigDecimal quantity
 			) {
+		
+		logger.info("Conversion from {} and {}", from, to);
 		
 		CurrencyConversion curConv = exchangeProxy.retrieveExchangeValue(from, to);
 		return new CurrencyConversion(
