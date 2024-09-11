@@ -33,3 +33,55 @@ Moto of this repository is to get a clear idea of designing a web application ba
 	- http://localhost:8765/SERVICE_NAME_FROM_EUREKA/URL_TO_API
 	- http://localhost:8765/CURRENCY-EXCHANGE-SERVICE/currency-exchange/from/EUR/to/INR
 	- http://localhost:8765/CURRENCY-CONVERSION-SERVICE/currency-conversion-feign/from/EUR/to/INR/quantity/10
+	
+# Create docker images
+
+## 1. pom.xml changes
+	
+	---
+	<!-- Below plugin is used to create docker images with ease -->
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<image>
+						<name>
+							bunty27/smd-${project.artifactId}:${project.version}
+						</name>
+					</image>
+					<pullPolicy>
+						IF_NOT_PRESENT
+					</pullPolicy>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	---
+
+## 2. Ecplise
+
+	In Ecplise --> Right click Project --> Run as --> Maven Build --> Under Main Tab --> Goals : spring-boot:build-image -DskipTests
+	In cmd --> mvm spring-boot:build-image -DskipTests
+	
+	
+	
+# Configure Google Cloud Kubernetes Clusters
+
+## Steps to start GKE and Connect using Cloud Shell terminal
+
+1. Activate GKE with free trial versions
+2. Start a GKE with default settings
+3. Now open the Cloud Shell in new Terminal
+4. Copy the command to connect to this clusters from Connect tab icon
+5. Run the command in the GKE
+
+## Commands to run
+
+1. kubectl version --> Shows the verion of the kubernetes
+2. kubectl create deployment hello-world-rest-api --image in28min/hello-world-rest-api:0.0.1.RELEASE
+	- This image comes from docker repo, you can create your own images to directly start with your own projects
+	- This command creates a new deployment in the cloud
+3. kubectl expose deployment hello-world-rest-api --type=LoadBalancer --port=8080
+	- Expose the application to the outside world

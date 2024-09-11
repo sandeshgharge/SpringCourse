@@ -115,11 +115,22 @@
 		</dependencies>
 	</dependencyManagement>
 
+	<!-- Below plugin is used to create docker images with ease -->
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<image>
+						<name>
+							bunty27/smd-${project.artifactId}:${project.version}
+						</name>
+					</image>
+					<pullPolicy>
+						IF_NOT_PRESENT
+					</pullPolicy>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
