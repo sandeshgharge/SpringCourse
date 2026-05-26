@@ -1,3 +1,5 @@
+/**
+
 package com.firstSpringBoot.restApi.security;
 
 import static org.springframework.security.config.Customizer.withDefaults;
@@ -6,10 +8,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.web.SecurityFilterChain;
 
-/**
+
  * In case this security file a filter chain is defined which will take care of the security
  * If not defined the default login page is displayed to access the data using user and password
- */
+
 //@Configuration
 public class SpringSecurityConfiguration {
 
@@ -28,3 +30,4 @@ public class SpringSecurityConfiguration {
 		return httpS.build();
 	}
 }
+*/
