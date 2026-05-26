@@ -1,4 +1,4 @@
-package concepts.inheritance;
+package com.example.javaconcepts.inheritance;
 
 class Waterways extends Vehicle{
     private String type; // Ship, Boat, 

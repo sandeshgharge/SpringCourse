@@ -1,4 +1,4 @@
-package concepts.collections.Map;
+package com.example.javaconcepts.collections.Map;
 
 import java.util.HashMap;
 import java.util.Map;

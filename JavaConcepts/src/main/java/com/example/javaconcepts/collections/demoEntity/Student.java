@@ -1,4 +1,4 @@
-package concepts.collections.demoEntity;
+package com.example.javaconcepts.collections.demoEntity;
 
 public class Student{
     private String id;

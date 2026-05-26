@@ -1,6 +1,4 @@
-package morganStanleyTest;
-
-import ch.qos.logback.core.net.SyslogOutputStream;
+package com.example.codingChallenges;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package concepts.inheritance;
+package com.example.javaconcepts.inheritance;
 
 class Roadways extends Vehicle{
     private int tireNo; // 2,4,8, 10

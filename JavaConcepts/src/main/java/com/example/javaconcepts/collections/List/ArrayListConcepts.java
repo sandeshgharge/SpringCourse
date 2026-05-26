@@ -1,6 +1,6 @@
-package concepts.collections.List;
+package com.example.javaconcepts.collections.List;
 
-import concepts.collections.iteration.IteratingMethods;
+import com.example.javaconcepts.collections.iteration.IteratingMethods;
 
 import java.util.ArrayList;
 import java.util.Collections;

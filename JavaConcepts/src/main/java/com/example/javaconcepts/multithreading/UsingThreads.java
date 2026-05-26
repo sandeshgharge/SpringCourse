@@ -1,4 +1,4 @@
-package concepts.multithreading;
+package com.example.javaconcepts.multithreading;
 
 import java.time.LocalDateTime;
 

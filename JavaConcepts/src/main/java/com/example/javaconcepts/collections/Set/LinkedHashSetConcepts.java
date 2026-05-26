@@ -1,6 +1,6 @@
-package concepts.collections.Set;
+package com.example.javaconcepts.collections.Set;
 
-import concepts.collections.demoEntity.Student;
+import com.example.javaconcepts.collections.demoEntity.Student;
 
 import java.util.HashSet;
 import java.util.LinkedHashSet;

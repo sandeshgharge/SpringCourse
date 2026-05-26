@@ -1,4 +1,4 @@
-package concepts.inheritance;
+package com.example.javaconcepts.inheritance;
 
 public class Vehicle{
     private String model;

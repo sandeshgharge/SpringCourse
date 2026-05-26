@@ -1,6 +1,6 @@
-package concepts.collections.iteration;
+package com.example.javaconcepts.collections.iteration;
 
-import concepts.collections.demoEntity.Student;
+import com.example.javaconcepts.collections.demoEntity.Student;
 
 import java.util.Iterator;
 import java.util.List;

@@ -1,4 +1,4 @@
-package concepts.inheritance;
+package com.example.javaconcepts.inheritance;
 
 class FourWheeler extends Roadways{
     private String name;

@@ -1,4 +1,4 @@
-package morganStanleyTest;
+package com.example.codingChallenges;
 
 import java.util.HashMap;
 import java.util.HashSet;
