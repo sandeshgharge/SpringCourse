@@ -36,28 +36,30 @@ public class KSortedLinkedListMerge {
 		while(!allParsed) {
 			allParsed = true;
 			for(int i = 0; i<lists.length; i++) {
-				if(lists[i]!=null)
-					if(lists[i].next != null) {
+					if(lists[i] != null) {
 						pq.offer(lists[i].val);
 						lists[i] = lists[i].next;
 						allParsed = false;
 					}
-					else {
-						lists[i] = lists[i].next;
-					}
-				
 			}
-			
-			
 		}
 		
-		while(pq.size() > 0) {
-			System.out.println(pq.poll());
-		}
+		res = createSortedListNode(pq);
 		
 
 		return res;
     }
+	
+	static ListNode createSortedListNode(PriorityQueue<Integer> pq){
+		
+		if(pq.size() > 0) {
+			int n = pq.poll();
+			return createSortedListNode(pq);
+		}
+		else
+			return new ListNode();
+		
+	}
 
 }
  
