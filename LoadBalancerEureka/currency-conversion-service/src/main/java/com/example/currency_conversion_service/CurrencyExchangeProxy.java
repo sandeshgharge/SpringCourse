@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 /*
  * For deploying this application in Kubernetes commented above and added below line for feign calls
  */
-@FeignClient(name="currency-exchang", url="${CURRENCY_EXCHANGE_SERVICE_HOST:http://localhost}:8000")
+@FeignClient(name="currency-exchange", url="${CURRENCY_EXCHANGE_SERVICE_HOST:http://localhost}:8000")
 public interface CurrencyExchangeProxy {
 
 	@GetMapping("currency-exchange/from/{from}/to/{to}")

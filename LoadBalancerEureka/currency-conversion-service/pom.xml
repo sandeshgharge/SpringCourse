@@ -55,11 +55,11 @@
 		
 		
 		
-		<!-- Eureka used for naming each server for easy communication between Microservices 
+		<!-- Eureka used for naming each server for easy communication between Microservices -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-		</dependency>-->
+		</dependency>
 		
 		
 		<dependency>
